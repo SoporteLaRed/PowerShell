@@ -9,7 +9,7 @@ cls
 echo ===================================
 echo   MENU
 echo ===================================
-echo   1. Desinstalar SupportAssist Home  
+echo   1. Desinstalar SupportAssist  
 echo   2. Opcion 2  
 echo   3. Opcion 3  
 echo   4. Opcion 4  
@@ -37,9 +37,9 @@ goto:inicio
 
 :op1
     echo.
-    echo. Has elegido la opcion No. 1 [Desinstalar SupportAssist Home]
+    echo. Has elegido la opcion No. 1 [Desinstalar SupportAssist]
     echo.
-        color 08
+        color 02
         ::Aquí van las líneas de comando de tu opción
     echo Iniciando Desinstalacion
          powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/SupportAssistCleanup.ps1 | iex"	

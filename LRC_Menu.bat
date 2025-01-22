@@ -13,7 +13,7 @@ echo   1. Desinstalar SupportAssist
 echo   2. Instalar SupportAssist for Home PCs  
 echo   3. Opcion 3  
 echo   4. Opcion 4  
-echo   5. Opcion 5  
+echo   5. Limpiar Archivos Temporales  
 echo   6. Salir
 echo ----------------------
 echo.
@@ -39,8 +39,7 @@ goto:inicio
     echo.
     echo. Has elegido la opcion No. 1 [Desinstalar SupportAssist]
     echo.
-        color 02
-        ::Aquí van las líneas de comando de tu opción
+    ::Aquí van las líneas de comando de tu opción
     echo Iniciando Desinstalacion
          powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/SupportAssistCleanup.ps1 | iex"	
     echo.
@@ -53,7 +52,6 @@ goto:inicio
     echo.
         ::Aquí van las líneas de comando de tu opción
          powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/DownInstall.ps1 | iex"
-        color 09
     echo.
     pause
     goto:inicio
@@ -83,7 +81,7 @@ goto:inicio
     echo. Has elegido la opcion No. 5
     echo.
         ::Aquí van las líneas de comando de tu opción
-        color 0C
+        powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/CleanTemp.ps1 | iex"
     echo.
     pause
     goto:inicio

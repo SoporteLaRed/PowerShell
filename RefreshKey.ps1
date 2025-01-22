@@ -1,8 +1,9 @@
 # Ruta del archivo .smt y la clave de implementación
-$Name = "SupportAssistConfiguration.mst"
-$RutaArchivo = "C:\ruta\a\archivo.smt"  # Reemplaza con la ruta de tu archivo
-$DeploymentKey = "MiClaveDeDeployment"  # La clave de implementación deseada
-
+#$RutaArchivo = "C:\ruta\a\archivo.smt"  # Reemplaza con la ruta de tu archivo
+$DeploymentKey = "L4r3d2025$"  # La clave de implementación deseada
+Write-Host "Buscando SupportAssistConfiguration.mst en el sistema..." -ForegroundColor Cyan
+# Buscar el producto por nombre en programas instalados
+$RutaArchivo = Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -like "*SupportAssistConfiguration.mst*" }
 # Verifica si el archivo existe
 if (-Not (Test-Path $RutaArchivo)) {
     Write-Warning "El archivo $RutaArchivo no existe."

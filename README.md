@@ -1,0 +1,2 @@
+# PowerShell
+Archivos .ps1

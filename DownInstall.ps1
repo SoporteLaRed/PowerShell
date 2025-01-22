@@ -1,5 +1,5 @@
 # Define la URL de la aplicación y la ruta de destino
-$AppUrl = "https://downloads.dell.com/serviceability/catalog/SupportAssistinstaller.exe"  # Reemplaza con la URL real
+$AppUrl = "https://downloads.dell.com/serviceability/catalog/SupportAssistInstaller.exe"  # Reemplaza con la URL real
 $Destino = "$env:Temp\mi-aplicacion.exe"          # Ruta de destino temporal
 
 # Descarga la aplicación

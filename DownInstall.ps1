@@ -3,15 +3,15 @@ $AppUrl = "https://downloads.dell.com/serviceability/catalog/SupportAssistinstal
 $Destino = "$env:Temp\mi-aplicacion.exe"          # Ruta de destino temporal
 
 # Descarga la aplicación
-Write-Host "Descargando la aplicación desde $AppUrl..."
+Write-Host "Descargando la aplicacion desde $AppUrl..."
 Invoke-WebRequest -Uri $AppUrl -OutFile $Destino -UseBasicParsing
 
 # Verifica si la descarga fue exitosa
 if (Test-Path $Destino) {
-    Write-Host "Descarga completada. Ejecutando la aplicación..."
+    Write-Host "Descarga completada. Ejecutando la aplicacion..."
     
     # Ejecuta la aplicación
     Start-Process -FilePath $Destino -Wait
 } else {
-    Write-Host "Error: No se pudo descargar la aplicación."
+    Write-Host "Error: No se pudo descargar la aplicacion."
 }

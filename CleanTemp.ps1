@@ -32,6 +32,6 @@ function Eliminar-ArchivosTemporales {
 }
 
 # Ejecutar la función para las rutas especificadas
-Eliminar-ArchivosTemporales -Paths $TempPaths
+Eliminar-ArchivosTemporales $Paths $TempPaths
 
 Write-Host "Limpieza de archivos temporales finalizada."

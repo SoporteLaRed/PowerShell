@@ -1,4 +1,5 @@
 # Ruta del archivo .smt y la clave de implementación
+$Name = "SupportAssistConfiguration.mst"
 $RutaArchivo = "C:\ruta\a\archivo.smt"  # Reemplaza con la ruta de tu archivo
 $DeploymentKey = "MiClaveDeDeployment"  # La clave de implementación deseada
 

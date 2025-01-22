@@ -23,7 +23,7 @@ function Eliminar-ArchivosTemporales {
                 
                 Write-Host "Limpieza completada en: $Path"
             } catch {
-                Write-Warning "No se pudo limpiar $Path: $_"
+                Write-Warning "No se pudo limpiar $Path"
             }
         } else {
             Write-Warning "El directorio $Path no existe."
@@ -32,6 +32,6 @@ function Eliminar-ArchivosTemporales {
 }
 
 # Ejecutar la función para las rutas especificadas
-Eliminar-ArchivosTemporales $Paths $TempPaths
+Eliminar-ArchivosTemporales -Paths $TempPaths
 
 Write-Host "Limpieza de archivos temporales finalizada."

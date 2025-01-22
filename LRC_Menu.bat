@@ -37,7 +37,7 @@ goto:inicio
 
 :op1
     echo.
-    echo. Has elegido la opcion No. 1
+    echo. Has elegido la opcion No. 1 [Desinstalar SupportAssist Home]
     echo.
         color 08
         ::Aquí van las líneas de comando de tu opción

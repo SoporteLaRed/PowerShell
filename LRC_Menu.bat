@@ -1,14 +1,13 @@
 @echo off
 :: Verifica si el script se está ejecutando como administrador
-:: net session >nul 2>&1
-:: if %errorlevel% neq 0 (
-::     echo El script necesita ejecutarse como administrador.
-::     pause
-::     :: Relanzar el script como administrador
-::     powershell -Command "Start-Process '%~f0' -Verb RunAs"
-::     exit /b
-:: )
-powershell -Command "Start-Process '%~f0' -Verb RunAs"
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo El script necesita ejecutarse como administrador.
+    pause
+    :: Relanzar el script como administrador
+    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+    exit /b
+)
 :: Continuar con el resto del script
 echo El script se está ejecutando como administrador.
 
@@ -50,10 +49,10 @@ goto:inicio
 
 :op1
     echo.
-    echo. Has elegido la opcion No. 1 [Desinstalar SupportAssist]
+    echo.  Has elegido la opcion No. 1 [Desinstalar SupportAssist]
     echo.
     ::Aquí van las líneas de comando de tu opción
-    echo Iniciando Desinstalacion
+    echo. Iniciando Desinstalacion
          powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/DeleteSupportAssist.ps1 | iex"	
     echo.
     pause
@@ -61,9 +60,9 @@ goto:inicio
 
 :op2
     echo.
-    echo. Has elegido la opcion No. 2 [Instalar SupportAssist for Home PCs]
+    echo.  Has elegido la opcion No. 2 [Instalar SupportAssist for Home PCs]
     echo.
-        ::Aquí van las líneas de comando de tu opción
+    echo. Iniciando Instalacion
          powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/DownInstall.ps1 | iex"
     echo.
     pause

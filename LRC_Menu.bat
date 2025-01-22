@@ -52,7 +52,7 @@ goto:inicio
     echo. Has elegido la opcion No. 2 [Instalar SupportAssist for Home PCs]
     echo.
         ::Aquí van las líneas de comando de tu opción
-         powershell -Command "iwr -useb https://downloads.dell.com/serviceability/catalog/SupportAssistinstaller.exe | iex"
+         powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/DownInstall.ps1 | iex"
         color 09
     echo.
     pause

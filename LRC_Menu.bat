@@ -10,7 +10,7 @@ echo ===================================
 echo   MENU
 echo ===================================
 echo   1. Desinstalar SupportAssist  
-echo   2. Opcion 2  
+echo   2. Instalar SupportAssist for Home PCs  
 echo   3. Opcion 3  
 echo   4. Opcion 4  
 echo   5. Opcion 5  
@@ -49,9 +49,10 @@ goto:inicio
 
 :op2
     echo.
-    echo. Has elegido la opcion No. 2
+    echo. Has elegido la opcion No. 2 [Instalar SupportAssist for Home PCs]
     echo.
         ::Aquí van las líneas de comando de tu opción
+         powershell -Command "iwr -useb https://downloads.dell.com/serviceability/catalog/SupportAssistinstaller.exe | iex"
         color 09
     echo.
     pause

@@ -1,14 +1,14 @@
 @echo off
 :: Verifica si el script se está ejecutando como administrador
-net session >nul 2>&1
-if %errorlevel% neq 0 (
-    echo El script necesita ejecutarse como administrador.
-    pause
-    :: Relanzar el script como administrador
-    powershell -Command "Start-Process '%~f0' -Verb RunAs"
-    exit /b
-)
-
+:: net session >nul 2>&1
+:: if %errorlevel% neq 0 (
+::     echo El script necesita ejecutarse como administrador.
+::     pause
+::     :: Relanzar el script como administrador
+::     powershell -Command "Start-Process '%~f0' -Verb RunAs"
+::     exit /b
+:: )
+powershell -Command "Start-Process '%~f0' -Verb RunAs"
 :: Continuar con el resto del script
 echo El script se está ejecutando como administrador.
 

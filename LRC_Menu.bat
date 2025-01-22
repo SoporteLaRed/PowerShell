@@ -41,7 +41,7 @@ goto:inicio
     echo.
     ::Aquí van las líneas de comando de tu opción
     echo Iniciando Desinstalacion
-         powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/SupportAssistCleanup.ps1 | iex"	
+         powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/DeleteSupportAssist.ps1 | iex"	
     echo.
     pause
     goto:inicio

@@ -1,2 +1,3 @@
 Token=L4r3d2025$
+UrlMSI=hola
 UrlMST=https://github.com/SoporteLaRed/PowerShell/raw/refs/heads/main/SupportAssistConfiguration.mst

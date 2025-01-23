@@ -1,0 +1,2 @@
+Token=L4r3d2025$
+UrlMST=https://github.com/SoporteLaRed/PowerShell/raw/refs/heads/main/SupportAssistConfiguration.mst

@@ -1,6 +1,6 @@
     # Ruta del archivo de texto
     #$filePath = "https://github.com/SoporteLaRed/PowerShell/raw/refs/heads/main/variables.txt"
-    $filePath = "C:\Users\EnriqueAnguasAnguas\Desktop\variables.txt"
+    $filePath = "https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/variables.txt"
     # Leer las líneas del archivo
     $lines = Get-Content $filePath
     # Procesar cada línea como clave=valor

@@ -1,14 +1,28 @@
+    # Ruta del archivo de texto
+    $filePath = "https://github.com/SoporteLaRed/PowerShell/raw/refs/heads/main/variables.txt"
+    # Leer las líneas del archivo
+    $lines = Get-Content $filePath
+    # Procesar cada línea como clave=valor
+    foreach ($line in $lines) {
+        $key, $value = $line -split "="
+        Set-Variable -Name $key -Value $value
+    }
+    # Usar las variables
+    Write-Host "Token: $Token"
+    Write-Host "UrlMST: $UrlMST"
+    Write-Host "UrlMSI $UrlM"
+
 # Define la URL del MSI y la ruta de destino
-$AppUrlMSI = "http://soporte.lared.mx/SupportAssistInstaller.msi"  # Reemplaza con la URL real
+#$AppUrlMSI = "http://soporte.lared.mx/SupportAssistInstaller.msi"  # Reemplaza con la URL real
 $DestinoMSI = "$env:Temp\MSI-aplicacion.msi"          # Ruta de destino temporal
 # Define la URL del MST y la ruta de destino
-$AppUrlMST = "https://github.com/SoporteLaRed/PowerShell/raw/refs/heads/main/SupportAssistConfiguration.mst"  # Reemplaza con la URL real
+#$AppUrlMST = "https://github.com/SoporteLaRed/PowerShell/raw/refs/heads/main/SupportAssistConfiguration.mst"  # Reemplaza con la URL real
 $DestinoMST = "$env:Temp\MST-aplicacion.mst"          # Ruta de destino temporal
 # Descarga la archivos
-Write-Host "Descargando MSI desde $AppUrlMSI..."
-Invoke-WebRequest -Uri $AppUrlMSI -OutFile $DestinoMSI -UseBasicParsing
-Write-Host "Descargando MST desde $AppUrlMST..."
-Invoke-WebRequest -Uri $AppUrlMST -OutFile $DestinoMST -UseBasicParsing
+Write-Host "Descargando MSI desde $UrlMSI..."
+Invoke-WebRequest -Uri $UrlMSI -OutFile $DestinoMSI -UseBasicParsing
+Write-Host "Descargando MST desde $UrlMST..."
+Invoke-WebRequest -Uri $UrlMST -OutFile $DestinoMST -UseBasicParsing
 
 # Verifica si la descarga fue exitosa
 if (Test-Path $DestinoMSI) {
@@ -24,7 +38,7 @@ if (Test-Path $DestinoMSI) {
     #Start-Process -FilePath $Destino -Wait
     $msiPath = $DestinoMSI
     $mstPath = $DestinoMST
-    $token = "L4r3d2025$"
+    #$token = "L4r3d2025$"
     # Aplicar el MST durante la instalación
     Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$msiPath`" TRANSFORMS=`"$mstPath`" DEPLOYMENTKEY=`"$token`" /quiet /norestart" -Wait
     Write-Host "MSI instalado con el transformador aplicado."

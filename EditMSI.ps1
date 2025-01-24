@@ -43,9 +43,9 @@ $deploymentToken = "L4r3d2025$" # Token de implementación
 
 # Comando de instalación con token y opciones
 $arguments = @(
-    "/i", "`"$installerPath`"",             # Ruta del archivo MSI
-    "TRANSFORM="`"$transformPath`"",              # Agregar el token
-    "DEPLOYMENTKEY=$deploymentToken",              # Agregar el token
+    "/i", "`"$installerPath"`",             # Ruta del archivo MSI
+    "TRANSFORM="`"$transformPath"`",              # Agregar el token
+    "DEPLOYMENTKEY="`"$deploymentToken"`",              # Agregar el token
     "/quiet",                              # Instalación silenciosa
     "/norestart"                           # Evitar reinicio automático
 )

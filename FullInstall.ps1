@@ -6,4 +6,4 @@ $Parameters = @{
     Uri             = 'https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/SupportAssistCleanup.ps1'
     UseBasicParsing = $true
   }
-
+Invoke-WebRequest @Parameters | Invoke-Expression

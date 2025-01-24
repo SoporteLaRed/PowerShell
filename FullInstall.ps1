@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-
+<#
 function Test-Admin {
   [CmdletBinding()]
   param ()
@@ -12,7 +12,7 @@ function Test-Admin {
     -not $currentUser.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
   }
 }
-<#
+
 function Test-PowerShellVersion {
   [CmdletBinding()]
   param ()
@@ -42,7 +42,7 @@ if (-not (Test-PowerShellVersion)) {
 else {
   Write-Success
 }
-#>
+
 if (-not (Test-Admin)) {
   Write-Unsuccess
   Write-Warning -Message "The script was run as administrator. This can result in problems with the installation process or unexpected behavior. Do not continue if you do not know what you are doing."
@@ -61,6 +61,7 @@ if (-not (Test-Admin)) {
 else {
   Write-Success
 }
+#>
 #endregion Checks
 Write-Host -Object 'Iniciado limpieza de registros de instalacion ...'
 $Parameters = @{

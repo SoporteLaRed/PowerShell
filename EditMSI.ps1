@@ -35,8 +35,9 @@ if (Test-Path $DestinoMSI) {
     Write-Host "Error: No se pudo descargar la archivo MSI."
 }
 #>
+# Llamar desinstalacion de SupporAssits Home
+Start-Process
 #Ejecutar Archivos Locales
-
 $installerPath = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasco\SupportAssist\SupportAssistInstaller-x64.msi" # Ruta del instalador MSI
 $transformPath = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasco\SupportAssist\SupportAssistConfiguration.mst" # Ruta del instalador MST
 $log = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasco\SupportAssist\SupportAssistMsi.log" # 

@@ -41,6 +41,11 @@ $installerPath = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasc
 $transformPath = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasco\SupportAssist\SupportAssistConfiguration.mst" # Ruta del instalador MST
 $deploymentToken = "L4r3d2025$" # Token de implementación
 
+# Define the parameters for silent uninstallation
+# $msiParams = "/x $productCode /qn /log uninstall.log"
+# Uninstall the application using msiexec
+# $result = Start-Process -FilePath "msiexec.exe" -ArgumentList $msiParams -Wait -PassThru
+
 # Comando de instalación con token y opciones
 $arguments = @(
     "/i",

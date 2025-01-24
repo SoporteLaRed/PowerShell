@@ -22,7 +22,7 @@ echo ===================================
 echo   MENU
 echo ===================================
 echo   1. Desinstalar SupportAssist  
-echo   2. Instalar SupportAssist for Home PCs  
+echo   2. Instalar SupportAssist Bussines  
 echo   3. Opcion 3  
 echo   4. Opcion 4  
 echo   5. Limpiar Archivos Temporales  

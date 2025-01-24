@@ -46,10 +46,11 @@ $deploymentToken = "L4r3d2025$" # Token de implementación
 # $msiParams = "/x $productCode /qn /log uninstall.log"
 # Uninstall the application using msiexec
 # $result = Start-Process -FilePath "msiexec.exe" -ArgumentList $msiParams -Wait -PassThru
-<#
+
 msiexec /i $installerPath TRANSFORMS=$transformPath DEPLOYMENTKEY=$deploymentToken /quiet /norestart /qn /l+ $log
-#>
+
 # Comando de instalación con token y opciones
+<#
 $arguments = @(
     "/i",
     "`"$installerPath`"",             # Ruta del archivo MSI
@@ -58,6 +59,7 @@ $arguments = @(
     "/quiet",                              # Instalación silenciosa
     "/norestart"                           # Evitar reinicio automático
 )
+#>
 # Ejecutar el instalador con los argumentos
 Start-Process -FilePath "msiexec.exe" -ArgumentList $arguments -Wait
 Write-Host "Instalación de SupportAssist Business completada."

@@ -12,7 +12,7 @@ function Test-Admin {
     -not $currentUser.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
   }
 }
-
+<#
 function Test-PowerShellVersion {
   [CmdletBinding()]
   param ()
@@ -24,9 +24,10 @@ function Test-PowerShellVersion {
     $PSVersionTable.PSVersion -ge $PSMinVersion
   }
 }
-
+#>
 #region Main
 #region Checks
+<#
 if (-not (Test-PowerShellVersion)) {
   Write-Unsuccess
   Write-Warning -Message 'PowerShell 5.1 or higher is required to run this script'
@@ -41,6 +42,7 @@ if (-not (Test-PowerShellVersion)) {
 else {
   Write-Success
 }
+#>
 if (-not (Test-Admin)) {
   Write-Unsuccess
   Write-Warning -Message "The script was run as administrator. This can result in problems with the installation process or unexpected behavior. Do not continue if you do not know what you are doing."
@@ -60,7 +62,7 @@ else {
   Write-Success
 }
 #endregion Checks
-Write-Host -Object 'Iniciado limpieza de registros de inatalacion ...'
+Write-Host -Object 'Iniciado limpieza de registros de instalacion ...'
 $Parameters = @{
     Uri             = 'https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/SupportAssistCleanup.ps1'
     UseBasicParsing = $true

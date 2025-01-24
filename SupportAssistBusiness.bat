@@ -13,7 +13,7 @@ ECHO El script se está ejecutando como administrador.
 pause
 cls
 COLOR 1F
-ECHO Bienvenido a la instalación de SupportAssistBusiness
+ECHO Bienvenido a la instalacion de SupportAssistBusiness
 powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/FullInstall.ps1 | iex"
 pause
 @cls&exit

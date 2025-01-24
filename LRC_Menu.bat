@@ -28,7 +28,7 @@ echo   4. Opcion 4
 echo   5. Limpiar Archivos Temporales  
 echo   6. Salir
 echo ----------------------
-echo.
+echo. %~dp0
 
 SET /p var= ^> Seleccione una opcion [1-6]:
 

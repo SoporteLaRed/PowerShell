@@ -39,13 +39,16 @@ if (Test-Path $DestinoMSI) {
 
 $installerPath = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasco\SupportAssist\SupportAssistInstaller-x64.msi" # Ruta del instalador MSI
 $transformPath = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasco\SupportAssist\SupportAssistConfiguration.mst" # Ruta del instalador MST
+$log = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasco\SupportAssist\SupportAssistMsi.log" # Ruta del instalador MST
 $deploymentToken = "L4r3d2025$" # Token de implementación
 
 # Define the parameters for silent uninstallation
 # $msiParams = "/x $productCode /qn /log uninstall.log"
 # Uninstall the application using msiexec
 # $result = Start-Process -FilePath "msiexec.exe" -ArgumentList $msiParams -Wait -PassThru
-
+<#
+msiexec /i $installerPath TRANSFORMS=$transformPath DEPLOYMENTKEY=$deploymentToken /quiet /norestart /qn /l+ $log
+#>
 # Comando de instalación con token y opciones
 $arguments = @(
     "/i",

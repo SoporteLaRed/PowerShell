@@ -23,7 +23,7 @@ echo   MENU
 echo ===================================
 echo   1. Desinstalar SupportAssist  
 echo   2. Instalar SupportAssist Business  
-echo   3. Opcion 3  
+echo   3. Instalar SupportAssist Home  
 echo   4. Opcion 4  
 echo   5. Limpiar Archivos Temporales  
 echo   6. Salir
@@ -63,16 +63,16 @@ goto:inicio
     echo.  Has elegido la opcion No. 2 [Instalar SupportAssist Business]
     echo.
     echo. Iniciando Instalacion
-         powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/DownInstall.ps1 | iex"
+         powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/EditMSI.ps1 | iex"
     echo.
     pause
     goto:inicio
 
 :op3
     echo.
-    echo. Has elegido la opcion No. 3
+    echo. Has elegido la opcion No. 3 [Instalar SupportAssist Home]
     echo.
-        ::Aquí van las líneas de comando de tu opción
+         powershell -Command "iwr -useb https://raw.githubusercontent.com/SoporteLaRed/PowerShell/refs/heads/main/DownInstall.ps1 | iex"
         color 0A
     echo.
     pause

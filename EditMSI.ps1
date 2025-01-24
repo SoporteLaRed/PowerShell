@@ -39,7 +39,7 @@ if (Test-Path $DestinoMSI) {
 
 $installerPath = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasco\SupportAssist\SupportAssistInstaller-x64.msi" # Ruta del instalador MSI
 $transformPath = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasco\SupportAssist\SupportAssistConfiguration.mst" # Ruta del instalador MST
-$log = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasco\SupportAssist\SupportAssistMsi.log" # Ruta del instalador MST
+$log = "C:\Users\Administrador\Desktop\SupportAssistBusiness_GobTabasco\SupportAssist\SupportAssistMsi.log" # 
 $deploymentToken = "L4r3d2025$" # Token de implementación
 
 # Define the parameters for silent uninstallation
